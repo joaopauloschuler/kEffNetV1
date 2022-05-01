@@ -33,7 +33,7 @@ model = cai.efficientnet.kEfficientNetB0(
 ```
 Other [kEffNet variants](https://github.com/joaopauloschuler/k-neural-api/blob/master/cai/efficientnet.py) up to B7 are also available.
 
-### kDenseNet-BC L100
+### kDenseNet-BC L100 12ch
 
 ```
 model = cai.densenet.ksimple_densenet([32, 32, 3], 
@@ -61,17 +61,34 @@ model = cai.inception_v3.two_path_inception_v3(
   two_paths_first_block=False,
   two_paths_second_block=False,
   deep_two_paths=False,
-  kType=cai.layers.D6_16ch())
+  kType=cai.layers.D6_32ch())
 ```
 
-### kMobileNet
+### kMobileNet 32ch
 
 ```
+model = cai.mobilenet.kMobileNet(
+  include_top=True,
+  weights=None,
+  input_shape=(224, 224, 3),
+  pooling=None,
+  classes=10,
+  kType=cai.layers.D6_32ch())
 ```
 
-### kMobileNet V3
+### kMobileNet V3 32ch
 
 ```
+model = cai.mobilenet_v3.kMobileNetV3Large(
+  input_shape=(224, 224, 3),
+  alpha=1.0,
+  minimalistic=False,
+  include_top=True,
+  input_tensor=None,
+  classes=10,
+  pooling=None,
+  dropout_rate=0.2,
+  kType=cai.layers.D6_32ch())
 ```
 
 ## The Raw Results Folder
