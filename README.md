@@ -52,7 +52,7 @@ model = cai.densenet.ksimple_densenet([32, 32, 3],
 ```
 
 ### kInception V3 32ch
-
+The example below should work for most use cases. Some of the parameters such as `two_paths_partial_first_block`, `two_paths_first_block` and `two_paths_second_block` are related to the papaer [Reliable Deep Learning Plant Leaf Disease Classification Based on Light-Chroma Separated Branches](https://github.com/joaopauloschuler/two-path-noise-lab-plant-disease).
 ```
 model = cai.inception_v3.two_path_inception_v3(
   include_top=True,
@@ -68,6 +68,7 @@ model = cai.inception_v3.two_path_inception_v3(
 ```
 
 ### kMobileNet 32ch
+The example below creates a basic MobileNet with optimized pointwise convolutions:
 
 ```
 model = cai.mobilenet.kMobileNet(
@@ -80,7 +81,7 @@ model = cai.mobilenet.kMobileNet(
 ```
 
 ### kMobileNet V3 32ch
-
+The example below creates a MobileNet V3 with optimized pointwise convolutions:
 ```
 model = cai.mobilenet_v3.kMobileNetV3Large(
   input_shape=(224, 224, 3),
