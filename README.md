@@ -97,6 +97,23 @@ model = cai.mobilenet_v3.kMobileNetV3Large(
 ## Class Activation Maps with Oxford-IIIT Pets Dataset
 [Class activation maps (CAMs)](https://github.com/joaopauloschuler/kEffNetV1/blob/main/raw/kEffNet/Oxford-IIIT-Pet/CAMs.ipynb) source code used for this paper is available. In this source code, you'll find plenty of images not shown on the paper.
 
+The CAMs are calculated with:
+```
+  localImageArray = np.array(localImageArray, dtype='float32')
+  heat_map = cai.models.calculate_heat_map_from_dense_and_avgpool(aInput=localImageArray[0], target_class=image_class, pModel=model, pOutputLayerName='k_top_conv_group_interleaved', pDenseLayerName='k_probs')
+```
+
+Resized with:
+```
+heat_map_res = cv2.resize(heat_map, dsize=(localImageArray[0].shape[0], localImageArray[0].shape[1]), interpolation=cv2.INTER_CUBIC)
+```
+And then shown with:
+```
+plt.figure(figsize = (7, 7))
+plt.imshow(heat_map_res, interpolation='nearest', aspect='equal', alpha=1)
+plt.imshow(localImageArray[0], interpolation='nearest', aspect='equal', alpha=0.5)
+```
+
 <p><img src="docs/kEffNetV1.png"></img></p>
 
 <p><img src="docs/kEffNetV1b.png"></img></p>
