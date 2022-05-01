@@ -9,10 +9,12 @@ You can test kEffNet V1 via Google Colab:
 * [kEffNet v1.](https://colab.research.google.com/github/joaopauloschuler/k-neural-api/blob/master/examples/jupyter/kEffNet_v1.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/joaopauloschuler/k-neural-api/blob/master/examples/jupyter/kEffNet_v1.ipynb)
 
 ## Creating Optimized Models
-You can create kEffNet, kDenseNet-BC L100, kInception V3, kMobileNet and kMobileNet V3 Large following the examples below. The parameter `kType` defines the minimum number of channels per group. All examples in this section depend on the [K-CAI Neural API](https://github.com/joaopauloschuler/k-neural-api).
+You can create kEffNet, kDenseNet-BC L100, kInception V3, kMobileNet and kMobileNet V3 Large following the examples below. The parameter `kType` defines the minimum number of channels per group. For example, for 16 channels, you should use `cai.layers.D6_16ch()`. For 32 channels, you should use `cai.layers.D6_32ch()`.
+
+All examples in this section require importing the [K-CAI Neural API](https://github.com/joaopauloschuler/k-neural-api).
 
 ### kEffNet
-
+The example below shows the creation of a kEffNet-B0 16ch:
 ```
 model = cai.efficientnet.kEfficientNetB0(
   include_top=True,
@@ -20,6 +22,16 @@ model = cai.efficientnet.kEfficientNetB0(
   classes=10,
   kType=cai.layers.D6_16ch())
 ```
+For loading small images such as CIFAR-10's 32x32 images, you can skip the first strides with the `skip_stride_cnt` as shown in the following example:
+```
+model = cai.efficientnet.kEfficientNetB0(
+  include_top=True,
+  skip_stride_cnt=3,
+  input_shape=(32, 32, 3),
+  classes=10,
+  kType=cai.layers.D6_16ch())
+```
+Other [kEffNet variants](https://github.com/joaopauloschuler/k-neural-api/blob/master/cai/efficientnet.py) up to B7 are also available.
 
 ## The Raw Results Folder
 If you just need an easy to use example, you can try the Colab example above. Otherwise, you can look at all raw experiment files used for the paper on the [raw](https://github.com/joaopauloschuler/kEffNetV1/tree/main/raw) folder.
