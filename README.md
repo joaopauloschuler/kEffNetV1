@@ -8,6 +8,9 @@ In Deep Convolutional Neural Networks (DCNNs), the parameter count in pointwise 
 You can test kEffNet V1 via Google Colab:
 * [kEffNet v1.](https://colab.research.google.com/github/joaopauloschuler/k-neural-api/blob/master/examples/jupyter/kEffNet_v1.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/joaopauloschuler/k-neural-api/blob/master/examples/jupyter/kEffNet_v1.ipynb)
 
+## The Raw Results Folder
+If you just need an easy to use example, you can try the Colab example above. Otherwise, you can look at all raw experiment files used for the paper on the [raw](https://github.com/joaopauloschuler/kEffNetV1/tree/main/raw) folder.
+
 ## Citing this Paper 
 ```
 @article{Schwarz Schuler_Romani_Abdel-Nasser_Rashwan_Puig_2022, 
