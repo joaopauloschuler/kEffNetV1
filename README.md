@@ -94,6 +94,8 @@ model = cai.mobilenet_v3.kMobileNetV3Large(
   dropout_rate=0.2,
   kType=cai.layers.D6_32ch())
 ```
+## Class Activation Maps
+Class activation maps (CAMs) source code used for this is available.
 
 ## References
 Please refer to the [paper](https://www.researchgate.net/publication/360226228_Grouped_Pointwise_Convolutions_Reduce_Parameters_in_Convolutional_Neural_Networks) regarding the baseline model references.
