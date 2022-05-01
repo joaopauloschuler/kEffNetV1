@@ -33,6 +33,47 @@ model = cai.efficientnet.kEfficientNetB0(
 ```
 Other [kEffNet variants](https://github.com/joaopauloschuler/k-neural-api/blob/master/cai/efficientnet.py) up to B7 are also available.
 
+### kDenseNet-BC L100
+
+```
+model = cai.densenet.ksimple_densenet([32, 32, 3], 
+  blocks=16, 
+  growth_rate=12, bottleneck=48, compression=0.5,
+  l2_decay=0,
+  kTypeBlock=cai.layers.D6_12ch(), 
+  kTypeTransition=cai.layers.D6_12ch(), 
+  num_classes=10,
+  dropout_rate=0.0,
+  activation=keras.activations.swish,
+  has_interleave_at_transition=True)
+```
+
+### kInception V3 32ch
+
+```
+model = cai.inception_v3.two_path_inception_v3(
+  include_top=True,
+  weights=None,
+  input_shape=(224, 224, 3),
+  pooling=None,
+  classes=num_classes,
+  two_paths_partial_first_block=0,
+  two_paths_first_block=False,
+  two_paths_second_block=False,
+  deep_two_paths=False,
+  kType=cai.layers.D6_16ch())
+```
+
+### kMobileNet
+
+```
+```
+
+### kMobileNet V3
+
+```
+```
+
 ## The Raw Results Folder
 If you just need an easy to use example, you can try the Colab example above. Otherwise, you can look at all raw experiment files used for the paper on the [raw](https://github.com/joaopauloschuler/kEffNetV1/tree/main/raw) folder.
 
