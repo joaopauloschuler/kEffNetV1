@@ -8,6 +8,9 @@ In Deep Convolutional Neural Networks (DCNNs), the parameter count in pointwise 
 You can test kEffNet V1 via Google Colab:
 * [kEffNet v1.](https://colab.research.google.com/github/joaopauloschuler/k-neural-api/blob/master/examples/jupyter/kEffNet_v1.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/joaopauloschuler/k-neural-api/blob/master/examples/jupyter/kEffNet_v1.ipynb)
 
+## The Raw Results Folder
+If you just need an easy to use example, you can try the Colab example above. Otherwise, you can look at all raw experiment files used for the paper on the [raw](https://github.com/joaopauloschuler/kEffNetV1/tree/main/raw) folder.
+
 ## Creating Optimized Models
 You can create kEffNet, kDenseNet-BC L100, kInception V3, kMobileNet and kMobileNet V3 Large following the examples below. The parameter `kType` defines the minimum number of channels per group. For example, for 16 channels, you should use `cai.layers.D6_16ch()`. For 32 channels, you should use `cai.layers.D6_32ch()`.
 
@@ -34,14 +37,14 @@ model = cai.efficientnet.kEfficientNetB0(
 Other [kEffNet variants](https://github.com/joaopauloschuler/k-neural-api/blob/master/cai/efficientnet.py) up to B7 are also available.
 
 ### kDenseNet-BC L100 12ch
-
+In DenseNets, you can define the minimum number of channels for transitions (`kTypeTransition`) and for DenseNet blocks (`kTypeBlock`):
 ```
 model = cai.densenet.ksimple_densenet([32, 32, 3], 
   blocks=16, 
   growth_rate=12, bottleneck=48, compression=0.5,
   l2_decay=0,
+  kTypeTransition=cai.layers.D6_12ch(),
   kTypeBlock=cai.layers.D6_12ch(), 
-  kTypeTransition=cai.layers.D6_12ch(), 
   num_classes=10,
   dropout_rate=0.0,
   activation=keras.activations.swish,
@@ -91,8 +94,8 @@ model = cai.mobilenet_v3.kMobileNetV3Large(
   kType=cai.layers.D6_32ch())
 ```
 
-## The Raw Results Folder
-If you just need an easy to use example, you can try the Colab example above. Otherwise, you can look at all raw experiment files used for the paper on the [raw](https://github.com/joaopauloschuler/kEffNetV1/tree/main/raw) folder.
+## References
+Please refer to the [paper](https://www.researchgate.net/publication/360226228_Grouped_Pointwise_Convolutions_Reduce_Parameters_in_Convolutional_Neural_Networks) regarding the baseline model references.
 
 ## Citing this Paper 
 ```
