@@ -1,6 +1,7 @@
 # The Raw Results Folder
 This folder is organized as follows: `<model name>/<dataset name>`.
-  
+
+## Experiment Labels
 Each raw file has a label in its name. The following tables translate these labels.
 
 <p><img src="../docs/cifar-10.png"></img></p>
