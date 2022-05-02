@@ -12,7 +12,7 @@ You can test kEffNet V1 via Google Colab:
 If you just need an easy to use example, you can try the Colab example above. Otherwise, you can look at all raw experiment files used for the paper on the [raw](https://github.com/joaopauloschuler/kEffNetV1/tree/main/raw) folder.
 
 ## Creating Optimized Models
-You can create kEffNet, kDenseNet-BC L100, kInception V3, kMobileNet and kMobileNet V3 Large following the examples below. The parameter `kType` defines the minimum number of channels per group. For example, for 16 channels, you should use `cai.layers.D6_16ch()`. For 32 channels, you should use `cai.layers.D6_32ch()`.
+You can create kEffNet, kDenseNet-BC L100, kInception V3, kMobileNet and kMobileNet V3 Large following the examples below. The parameter `kType` defines the minimum number of channels per group. For example, for a minimum of 16 channels per group, you should use `cai.layers.D6_16ch()`. For 32 channels, you should use `cai.layers.D6_32ch()`.
 
 All examples in this section require importing the [K-CAI Neural API](https://github.com/joaopauloschuler/k-neural-api).
 
@@ -25,7 +25,7 @@ model = cai.efficientnet.kEfficientNetB0(
   classes=10,
   kType=cai.layers.D6_16ch())
 ```
-For loading small images such as CIFAR-10's 32x32 images, you can skip the first strides with the `skip_stride_cnt` as shown in the following example:
+For loading small images such as CIFAR-10's 32x32 images, you can skip the first strides with the `skip_stride_cnt` parameter as shown in the following example:
 ```
 model = cai.efficientnet.kEfficientNetB0(
   include_top=True,
@@ -37,7 +37,7 @@ model = cai.efficientnet.kEfficientNetB0(
 Other [kEffNet variants](https://github.com/joaopauloschuler/k-neural-api/blob/master/cai/efficientnet.py) up to B7 are also available.
 
 ### kDenseNet-BC L100 12ch
-In DenseNets, you can define the minimum number of channels for transitions (`kTypeTransition`) and for DenseNet blocks (`kTypeBlock`):
+In DenseNets, you can define the minimum number of channels per group for transitions (`kTypeTransition`) and for blocks (`kTypeBlock`):
 ```
 model = cai.densenet.ksimple_densenet([32, 32, 3], 
   blocks=16, 
@@ -52,7 +52,7 @@ model = cai.densenet.ksimple_densenet([32, 32, 3],
 ```
 
 ### kInception V3 32ch
-The example below should work for most use cases. Some of the parameters such as `two_paths_partial_first_block`, `two_paths_first_block` and `two_paths_second_block` are related to the papaer [Reliable Deep Learning Plant Leaf Disease Classification Based on Light-Chroma Separated Branches](https://github.com/joaopauloschuler/two-path-noise-lab-plant-disease).
+The example below should work for most use cases:
 ```
 model = cai.inception_v3.two_path_inception_v3(
   include_top=True,
@@ -66,6 +66,7 @@ model = cai.inception_v3.two_path_inception_v3(
   deep_two_paths=False,
   kType=cai.layers.D6_32ch())
 ```
+Some of the parameters such as `two_paths_partial_first_block`, `two_paths_first_block` and `two_paths_second_block` are related to the papaer [Reliable Deep Learning Plant Leaf Disease Classification Based on Light-Chroma Separated Branches](https://github.com/joaopauloschuler/two-path-noise-lab-plant-disease).
 
 ### kMobileNet 32ch
 The example below creates a basic MobileNet with optimized pointwise convolutions:
