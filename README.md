@@ -121,6 +121,15 @@ plt.imshow(localImageArray[0], interpolation='nearest', aspect='equal', alpha=0.
 
 <p><img src="docs/kEffNetV1c.png"></img></p>
 
+## Give this Project a Star
+This project is an open source project. If you like what you see, please give it a star on github.
+
+## Further Parameter and Floating-point Computation Savings
+The following papers also deal about parameters and floating-point computation savings:
+- [Reliable Deep Learning Plant Leaf Disease Classification Based on Light-Chroma Separated Branches.](https://www.researchgate.net/publication/355215213_Reliable_Deep_Learning_Plant_Leaf_Disease_Classification_Based_on_Light-Chroma_Separated_Branches)
+- [Grouped Pointwise Convolutions Significantly Reduces Parameters in EfficientNet.](https://www.researchgate.net/publication/355214501_Grouped_Pointwise_Convolutions_Significantly_Reduces_Parameters_in_EfficientNet)
+- [Optimizing CNNs first layer with respect to color encoding.](https://www.researchgate.net/publication/357204289_Optimizing_CNNs_first_layer_with_respect_to_color_encoding)
+
 ## References
 Please refer to the [paper](https://www.researchgate.net/publication/360226228_Grouped_Pointwise_Convolutions_Reduce_Parameters_in_Convolutional_Neural_Networks) regarding the baseline model references.
 
