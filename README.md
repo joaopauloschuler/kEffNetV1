@@ -131,7 +131,7 @@ The following papers also deal about parameters and floating-point computation s
 - [Optimizing CNNs first layer with respect to color encoding.](https://www.researchgate.net/publication/357204289_Optimizing_CNNs_first_layer_with_respect_to_color_encoding)
 
 ## References
-Please refer to the [paper](https://www.researchgate.net/publication/360226228_Grouped_Pointwise_Convolutions_Reduce_Parameters_in_Convolutional_Neural_Networks) regarding the baseline model references.
+Please refer to the [paper](https://mendel-journal.org/index.php/mendel/article/view/169) regarding the baseline model references.
 
 ## Citing this Paper 
 ```
