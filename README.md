@@ -135,11 +135,12 @@ Please refer to the [paper](https://mendel-journal.org/index.php/mendel/article/
 
 ## Citing this Paper 
 ```
-@article{Schuler_2022_GPCRPNN, 
-  title={Grouped Pointwise Convolutions Reduce Parameters in Convolutional Neural Networks}, volume={28}, 
-  url={https://mendel-journal.org/index.php/mendel/article/view/169}, 
-  number={1}, 
-  journal={MENDEL}, 
+@article{Schuler_2022_GPCRPNN,
+  title={Grouped Pointwise Convolutions Reduce Parameters in Convolutional Neural Networks}, volume={28},
+  url={https://mendel-journal.org/index.php/mendel/article/view/169},
+  DOI={10.13164/mendel.2022.1.023},
+  number={1},
+  journal={MENDEL},
   author={Schwarz Schuler, Joao Paulo and Romani, Santiago and Abdel-Nasser, Mohamed and Rashwan, Hatem and Puig, Domenec},
   year={2022}, month={Jun.}, pages={23-31} }
 ```
