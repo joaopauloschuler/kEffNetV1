@@ -126,9 +126,9 @@ This project is an open source project. If you like what you see, please give it
 
 ## Further Parameter and Floating-point Computation Savings
 The following papers also deal about parameters and floating-point computation savings:
+- [An Enhanced Scheme for Reducing the Complexity of Pointwise Convolutions in CNNs for Image Classification Based on Interleaved Grouped Filters without Divisibility Constraints.](https://www.researchgate.net/publication/363413038_An_Enhanced_Scheme_for_Reducing_the_Complexity_of_Pointwise_Convolutions_in_CNNs_for_Image_Classification_Based_on_Interleaved_Grouped_Filters_without_Divisibility_Constraints)
 - [Reliable Deep Learning Plant Leaf Disease Classification Based on Light-Chroma Separated Branches.](https://www.researchgate.net/publication/355215213_Reliable_Deep_Learning_Plant_Leaf_Disease_Classification_Based_on_Light-Chroma_Separated_Branches)
-- [Grouped Pointwise Convolutions Significantly Reduces Parameters in EfficientNet.](https://www.researchgate.net/publication/355214501_Grouped_Pointwise_Convolutions_Significantly_Reduces_Parameters_in_EfficientNet)
-- [Optimizing CNNs first layer with respect to color encoding.](https://www.researchgate.net/publication/357204289_Optimizing_CNNs_first_layer_with_respect_to_color_encoding)
+- [Color-aware two-branch DCNN for efficient plant disease classification.](https://www.researchgate.net/publication/361511874_Color-Aware_Two-Branch_DCNN_for_Efficient_Plant_Disease_Classification)
 
 ## References
 Please refer to the [paper](https://mendel-journal.org/index.php/mendel/article/view/169) regarding the baseline model references.
