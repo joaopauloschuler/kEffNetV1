@@ -14,7 +14,7 @@ If you just need an easy to use example, you can try the Colab example above. Ot
 ## Creating Optimized Models
 You can create kEffNet, kDenseNet-BC L100, kInception V3, kMobileNet and kMobileNet V3 Large following the examples below. The parameter `kType` defines the minimum number of channels per group. For example, for a minimum of 16 channels per group, you should use `cai.layers.D6_16ch()`. For 32 channels, you should use `cai.layers.D6_32ch()`.
 
-All examples in this section require importing the [K-CAI Neural API](https://github.com/joaopauloschuler/k-neural-api).
+All examples in this project require importing the [K-CAI Neural API](https://github.com/joaopauloschuler/k-neural-api).
 
 ### kEffNet
 The example below shows the creation of a kEffNet-B0 16ch:
